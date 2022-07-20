@@ -21,7 +21,6 @@ var twoSum = function(nums, target) {
             if ((value + currentValue) === target) {
                 if (!(index === currentIndex)){
                     result.push(index, currentIndex)
-                    return result;
                 }
               }
         })
