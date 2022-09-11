@@ -3,12 +3,12 @@
  * @return {boolean}
  */
 var isPalindrome = function (s) {
-  let formatted = s
+  let x = s
     .toLowerCase()
     .replace(/[\W_]+/g, '')
-  let [left, right] = [0, formatted.length-1];
+  let [left, right] = [0, x.length-1];
   while (right > left) {
-    if (formatted[left] !== formatted[right]) {
+    if (x[left] !== x[right]) {
       return false;
     }
     left++;
