@@ -6,13 +6,13 @@ var isPalindrome = function (s) {
   let x = s
     .toLowerCase()
     .replace(/[\W_]+/g, '')
-  let [left, right] = [0, x.length-1];
-  while (right > left) {
-    if (x[left] !== x[right]) {
+  let [l, r] = [0, x.length-1];
+  while (r > l) {
+    if (x[l] !== x[r]) {
       return false;
     }
-    left++;
-    right--;
+    l++;
+    r--;
   }
   return true;
 };
