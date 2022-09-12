@@ -17,5 +17,4 @@ var twoSum = function (numbers, target) {
       return result;
     }
   }
-  return result;
 };
