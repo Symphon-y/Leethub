@@ -47,7 +47,6 @@ class LinkedList {
   print(text?: string) {
     let current = this.head;
     while (current) {
-      console.log(text ? `${text}: ${current?.val}` : current?.val);
       current = current.next;
     }
   }
@@ -92,15 +91,11 @@ const addTwoNumbers = (
   // if no more numbers in either l1 or l2
   // reverse each array, join as string, convert to number and add array1 to array2
   const l1Value = BigInt(objectCache.l1.reverse().join(''));
-  console.log('l1Value,', l1Value);
   const l2Value = BigInt(objectCache.l2.reverse().join(''));
-  console.log('l2Value,', l2Value);
   // add the two values together
   const additionResult = BigInt(l1Value) + BigInt(l2Value);
-  console.log('additionResult,', additionResult);
   // convert result from BigInt to a string, then to an array, then reverse it.
   const additionResultConverted = String(additionResult).split('').reverse();
-  console.log('additionResultConverted,', additionResultConverted);
 
   // return a new linked list from the above
   additionResultConverted.forEach((value, index) => {
