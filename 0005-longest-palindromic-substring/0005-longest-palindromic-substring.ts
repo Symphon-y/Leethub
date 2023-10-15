@@ -1,4 +1,4 @@
-function longestPalindrome(s: string): string {
+const longestPalindrome = (s: string): string => {
   if (!s || s.length <= 1) { return s }
   let longestPalindrome = s.substring(0, 1)
 
@@ -13,7 +13,7 @@ function longestPalindrome(s: string): string {
   return longestPalindrome
 }
 
-function expand(s: string, begin: number, end: number): string {
+const expand = (s: string, begin: number, end: number): string => {
   while (begin >= 0 && end <= s.length - 1 && s[begin] === s[end]) {
     begin--
     end++
